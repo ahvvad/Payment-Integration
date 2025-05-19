@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pyment_integration/Features/checkout/presentation/views/payment_details.dart';
 import 'package:pyment_integration/Features/checkout/presentation/views/widgets/custom_button_widget.dart';
 import 'package:pyment_integration/Features/checkout/presentation/views/widgets/order_info_item.dart';
 import 'package:pyment_integration/Features/checkout/presentation/views/widgets/total_price_widget.dart';
@@ -28,7 +29,13 @@ class MyCartViewBody extends StatelessWidget {
           const SizedBox(height: 15),
           const TotalPrice(title: 'Total', price: r'$50.97'),
           const Spacer(),
-          CustomButton(onTap: () {}),
+          CustomButton(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const PaymentDetails()),
+              );
+            },
+          ),
           const SizedBox(height: 20),
         ],
       ),
