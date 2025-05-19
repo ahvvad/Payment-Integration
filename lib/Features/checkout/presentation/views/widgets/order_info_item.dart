@@ -8,7 +8,7 @@ class OrderInfoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10.0),
+      padding: const EdgeInsets.only(bottom: 15.0),
       child: Row(
         children: [
           Text(title, style: Styles.style18, textAlign: TextAlign.center),

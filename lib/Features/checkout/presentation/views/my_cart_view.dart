@@ -17,7 +17,7 @@ class MyCartView extends StatelessWidget {
         centerTitle: true,
         title: const Text('My Cart', style: Styles.style25),
       ),
-      body: SingleChildScrollView(child: const MyCartViewBody()),
+      body: const MyCartViewBody(),
     );
   }
 }
