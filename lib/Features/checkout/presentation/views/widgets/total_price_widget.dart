@@ -11,7 +11,7 @@ class TotalPrice extends StatelessWidget {
     return Row(
       children: [
         Text(title, style: Styles.style24, textAlign: TextAlign.center),
-        Spacer(),
+        const Spacer(),
         Text(price, style: Styles.style24, textAlign: TextAlign.center),
       ],
     );

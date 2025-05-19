@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:pyment_integration/Core/utils/styles.dart';
 
-class CusttomButton extends StatelessWidget {
-  const CusttomButton({super.key});
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key, required this.onTap});
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFf34A853),
         padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       ),

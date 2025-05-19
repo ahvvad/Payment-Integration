@@ -9,10 +9,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Payment Intgration',
-      home: SafeArea(child: const MyCartView()),
+      home: SafeArea(child: MyCartView()),
     );
   }
 }
