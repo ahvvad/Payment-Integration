@@ -8,21 +8,23 @@ class PaymentDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Center(child: SvgPicture.asset('assets/images/arrow.svg')),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Center(child: SvgPicture.asset('assets/images/arrow.svg')),
+          ),
+          centerTitle: true,
+          title: const Text('Payment Details', style: Styles.style25),
         ),
-        centerTitle: true,
-        title: const Text('Payment Details', style: Styles.style25),
+        body: const PaymentDetailsBody(),
       ),
-      body: const PaymentDetailsBody(),
     );
   }
 }
